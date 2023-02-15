@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript DOM Events</h1>
+    <button>Click ME!</button>
+    <p>This is a paragraph</p>
+    <input type="text"><button id="btn2">Hide</button>
+    <p id="inputDisplay"></p>
+
+    <script>
+        const btn = document.querySelector("button");
+        const p = document.querySelector("p");
+        const toggle = document.getElementById("btn2");
+        const input = document.querySelector("input");
+        const inputDisplay = document.getElementById("inputDisplay");
+        
+        // btn.onclick = function() {
+        //     alert("Button was clicked!")
+        // }
+
+        btn.onmouseover = function() {
+            btn.innerHTML = "Mouse is over me!";
+        }
+
+        btn.onmouseleave = function() {
+            btn.innerHTML = "Mouse Left!"
+        }
+
+        btn.onclick = function() {
+            if(p.innerHTML === "This is a paragraph") {
+                p.innerHTML = "New content from Javscript";
+            } else {
+                p.innerHTML = "This is a paragraph";
+            }
+        }
+
+        toggle.onclick = function() {
+            if(input.type === "text"){
+                input.type = "password";
+                toggle.innerHTML = "Show"
+            } else {
+                input.type = "text";
+                toggle.innerHTML = "Hide"
+            }
+        }
+        
+        input.onkeyup = function() {
+            inputDisplay.innerHTML = input.value;
+        };
+
+    </script>
+</body>
+</html>

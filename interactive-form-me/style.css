@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {    
+--White: hsl(0, 0%, 100%);
+--Light-grayish-violet: hsl(270, 3%, 87%);
+--Dark-grayish-violet: hsl(279, 6%, 55%);
+--Very-dark-violet: hsl(278, 68%, 11%);
+--Red: hsl(0, 100%, 66%);
+}
+
+header {
+    background: url('images/bg-main-mobile.png');
+    background-repeat: no-repeat;
+    background-size: 80rem 14rem;
+    margin-bottom: 3rem;
+}
+
+.card-logo {
+    position: absolute;
+    z-index: 1;
+    top: 130px;
+    left: 35px;
+    width: 3.5rem;
+}
+
+#cvc {
+    position: absolute;
+    top: 95px;
+    left: 280px;
+    z-index: 1;
+    color: white;
+}
+
+#number {
+    position: absolute;
+    top: 190px;
+    left: 42px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#name {
+    position: absolute;
+    top: 230px;
+    left: 42px;
+    color: white;
+    font-size: .8rem;
+}
+
+#month {
+    position: absolute;
+    top: 230px;
+    left: 220px;
+    color: white;
+    font-size: .8rem; 
+}
+
+#divider {
+    position: absolute;
+    top: 230px;
+    left: 233px;
+    color: white;
+    font-size: .8rem; 
+} 
+
+#year {
+    position: absolute;
+    top: 230px;
+    left: 237px;
+    color: white;
+    font-size: .8rem;  
+}
+
+.card-back {
+    display: block;
+    width: 250px;
+    height: 150px;
+    transform: translate(90px, 30px);
+}
+
+.card-front {
+    display: block;
+    width: 250px;
+    height: 150px;
+    transform: translate(20px, -35px);
+}
+
+main {
+    padding: 0 10%;
+}
+
+.form-control.error input {
+    border: 2px solid red;
+}
+
+.form-control.success input {
+    border: 2px solid rgb(134, 201, 134);
+}
+
+.form-control small {
+    visibility: hidden;
+}
+
+.form-control.error small{
+    visibility: visible;
+    color: red;
+    margin-top: .1rem;
+}
+
+.form div {
+    padding-bottom: 1.5rem;
+}
+
+input {
+    width: 100%;
+    padding: .7rem;
+    border-radius: .5rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.first {
+    flex-basis: 30%;
+    padding-right: .5rem;
+}
+
+.second {
+    flex-basis: 30%;
+    padding-right: .5rem;
+}
+
+.third {
+    flex-basis: 40%;
+}
+
+.submit {
+    width: 100%;
+    padding: .7rem;
+    border-radius: .5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.submit {
+    color: white;
+    background: var(--Very-dark-violet);
+}
+
+input {
+    border: 1px solid black;
+}
+
+input[type = text]:focus {
+    border: 2px solid linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+}
+
+#thank {
+    display: none;
+}
+
+@media screen and (min-width: 1000px) {
+    header {
+        height: 100vh;
+        width: 30vw;
+        background: url('images/bg-main-desktop.png');
+        background-repeat: no-repeat;
+        background-size: 700px 3000px;
+    }
+
+    .card-logo {
+        position: absolute;
+        left: 145px;
+        top: 200px;
+    }
+
+    #number {
+        position: absolute;
+        top: 280px;
+        left: 139px;
+        font-size: 2.1rem;
+    }
+
+    #name {
+        position: absolute;
+        top: 330px;
+        left: 140px;
+    }
+
+    #month {
+        position: absolute;
+        top: 330px;
+        left: 410px;
+    }
+
+    #divider {
+        position: absolute;
+        top: 330px;
+        left: 423.5px; 
+    }
+
+    #year {
+        position: absolute;
+        top: 330px;
+        left: 428px; 
+    }
+
+    #cvc {
+        position: absolute;
+        top: 489px;
+        left: 460px;
+    }
+
+    main {
+        margin-left: 12rem;
+    }
+
+    .form {
+        width: 25rem;
+        height: 23rem;
+    }
+
+    .card-front {
+        width: 380px;
+        height: 200px;
+        transform: translate(200px, -30px);
+    }
+
+    .card-back {
+        width: 380px;
+        height: 200px;
+        transform: translate(300px,400px)
+    }
+
+    body {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 1800px) and (min-width: 1000px) {
+    .card-back {
+        transform: translate(170px, 400px);
+    }
+
+    .card-front {
+        transform: translate(125px, -30px);
+    }
+
+    #number {
+        position: absolute;
+        top: 280px;
+        left: 170px;
+        font-size: 2.1rem;
+    }
+
+    #name {
+        position: absolute;
+        top: 330px;
+        left: 172px;
+    }
+
+    #month {
+        position: absolute;
+        top: 330px;
+        left: 430px;
+    }
+
+    #divider {
+        position: absolute;
+        top: 330px;
+        left: 443.5px; 
+    }
+
+    #cvc {
+        position: absolute;
+        top: 489px;
+        left: 480px;
+    }
+
+    #year {
+        position: absolute;
+        top: 330px;
+        left: 448px; 
+    }
+}

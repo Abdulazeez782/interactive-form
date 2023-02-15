@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+  <header>
+    <img class="card-back" src="images/bg-card-back.png" alt="card-back">
+    <img class="card-front" src="images/bg-card-front.png" alt="card-front">
+    <img src="images/card-logo.svg" alt="card-logo" class="card-logo">
+    <p id="cvc">000</p>
+    <p id="number">0000 0000 0000 0000</p>
+    <p id="name">OLUDARE AZEEZ</p>
+    <p id="month">00</p>
+    <p id="divider">/</p>
+    <p id="year">00</p>
+  </header>
+
+  <main>
+      <form class="form" id="form">
+          <div class="form-control">
+            <label class="label">CARDHOLDER NAME</label>
+            <input type="text" placeholder="e.g. Jane Appleseed" id="name-input" class="input-group">
+            <small></small>
+          </div>
+
+          <div class="form-control">
+              <label>CARD NUMBER</label>    
+              <input type="text" placeholder="0000 0000 0000 0000" id="number-input" maxlength="19" class="input-group">
+              <small></small>
+          </div>
+
+          <div class="flex">
+              <div  class="first" class="form-control">
+                <label>Exp. Date</label>
+                <input type="text" placeholder="MM" id="month-input" maxlength="2" class="input-group">
+                <small></small>
+              </div>
+
+              <div class="second" class="form-control">
+                <label>(MM/YY)</label>
+                <input type="text" placeholder="YY" id="year-input" maxlength="2" class="input-group">
+                <small></small>
+              </div>
+
+              <div class="third" class="form-control">
+                <label>CVC</label>
+                <input type="text" placeholder="e.g. 123" id="cvc-input" maxlength="3" class="input-group">
+                <small></small>
+              </div>
+          </div>
+          <button id="submit" class="submit">Confirm</button>
+      </form>
+  </main>
+  
+
+  <div id="thank">
+          Thankyou!
+          We've added your card details
+          ContinueCompleted state start 
+  </div>
+  
+  <script src="script.js"></script>
+  
+</body>
+</html>
